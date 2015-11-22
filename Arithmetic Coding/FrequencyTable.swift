@@ -1,19 +1,12 @@
-//: Playground - noun: a place where people can play
+//
+//  FrequencyTable.swift
+//  Arithmetic Coding
+//
+//  Created by Oliver Poole on 22/11/2015.
+//  Copyright © 2015 OliverPoole. All rights reserved.
+//
 
-import Cocoa
-
-/**
- *  A structure to represent an input character
- */
-struct Symbol {
-    var character : Character
-    var frequency : Int
-    
-    struct Range {
-        var lower : Double
-        var upper : Double
-    }
-}
+import Foundation
 
 /**
  *  The table used to store the frequencies of the characters
@@ -64,26 +57,3 @@ struct FrequencyTable {
         return element.hashValue % table.count
     }
 }
-
-
-
-
-/**
-    Main
-*/
-
-
-var frequencyTable = FrequencyTable(capactiy: 50)
-
-let inputString = "BILL GATES"
-
-for char in inputString.characters {
-    frequencyTable.addValue(char)
-}
-
-for tableNode in frequencyTable.table {
-    // TODO: Calculate the ranges for each element in the hash table
-}
-
-// TODO: Run algorithm
-
