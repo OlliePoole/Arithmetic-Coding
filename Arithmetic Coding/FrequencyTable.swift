@@ -7,53 +7,33 @@
 //
 
 import Foundation
+import Cocoa
 
-/**
- *  The table used to store the frequencies of the characters
- *  in the input string
- */
 struct FrequencyTable {
     
-    class TableNode {
-        var symbol : Symbol
-        var next : TableNode?
-        
-        init(symbol : Symbol, next : TableNode?) {
-            self.symbol = symbol
-            self.next = next
-        }
-    }
-    
-    var table : Array<TableNode!>
-    
-    init(capactiy : Int) {
-        table = Array<TableNode!>(count: capactiy, repeatedValue: nil)
-    }
+    var table = Array<Symbol>()
     
     mutating func addValue(element : Character) {
+        let symbol = Symbol(character: element, frequency: 1)
         
-        let hashValue = hash(element)
-        
-        // If the element at the hash value is not empty
-        if let existingNode = table[hashValue] {
+        if table.contains(symbol) {
+            let index = table.indexOf(symbol)
             
-            // Does the table node at that hash value match the element
-            if existingNode.symbol.character == element {
-                existingNode.symbol.frequency++
-            }
-            else {
-                // Chain a new node to the existing table node
-                let node = TableNode(symbol: Symbol(character: element, frequency: 1), next: existingNode)
-                table[hashValue] = node
-            }
+            table[index!].frequency++
         }
-        else { // Create a new node, and add it to the table
-            let symbol = Symbol(character: element, frequency: 1)
-            table[hashValue] = TableNode(symbol: symbol, next: nil)
+        else {
+            table.append(symbol)
         }
     }
     
-    private func hash(element : Character) -> Int {
-        return element.hashValue % table.count
+    func symbolForElement(element : Character) -> Symbol? {
+        let symbol = Symbol(character: element, frequency: 1)
+        if table.contains(symbol) {
+            let index = table.indexOf(symbol)
+            
+            return table[index!]
+        }
+        
+        return nil
     }
 }

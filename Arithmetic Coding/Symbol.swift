@@ -11,10 +11,10 @@ import Foundation
 /**
  *  A structure to represent an input character
  */
-struct Symbol {
+class Symbol {
     var character : Character
     var frequency : Int
-    var range : Range?
+    var range : SymbolRange?
     
     init(character : Character, frequency : Int) {
         self.character = character
@@ -22,7 +22,15 @@ struct Symbol {
     }
 }
 
-struct Range {
+extension Symbol : Equatable {}
+    
+    func ==(lhs: Symbol, rhs: Symbol) -> Bool {
+        return lhs.character == rhs.character
+    }
+
+
+
+struct SymbolRange {
     var lower : Double
     var upper : Double
     
