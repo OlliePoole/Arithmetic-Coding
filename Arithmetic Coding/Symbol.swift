@@ -22,6 +22,7 @@ class Symbol {
     }
 }
 
+
 extension Symbol : Equatable {}
     
     func ==(lhs: Symbol, rhs: Symbol) -> Bool {

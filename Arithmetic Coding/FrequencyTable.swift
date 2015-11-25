@@ -11,7 +11,11 @@ import Cocoa
 
 struct FrequencyTable {
     
+    /// The structure to store the elements
     var table = Array<Symbol>()
+    
+    /// Store the number of elements to know when to stop decoding
+    var numberOfElements = 0
     
     mutating func addValue(element : Character) {
         let symbol = Symbol(character: element, frequency: 1)
@@ -24,6 +28,8 @@ struct FrequencyTable {
         else {
             table.append(symbol)
         }
+        
+        numberOfElements++
     }
     
     func symbolForElement(element : Character) -> Symbol? {

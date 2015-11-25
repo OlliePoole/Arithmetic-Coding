@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6B3D5A8D1C048FA100F0AD2E /* Double + Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A8C1C048FA100F0AD2E /* Double + Rounding.swift */; };
+		6B3D5A8F1C04B6C100F0AD2E /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A8E1C04B6C100F0AD2E /* Encoder.swift */; };
+		6B3D5A911C04B77300F0AD2E /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A901C04B77300F0AD2E /* Decoder.swift */; };
+		6B3D5A9E1C04B90800F0AD2E /* ArithmeticCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A9D1C04B90800F0AD2E /* ArithmeticCodingTests.swift */; };
 		6B42AB431C01DCC2001A2BDD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B42AB421C01DCC2001A2BDD /* main.swift */; };
 		6B42AB4A1C01DD38001A2BDD /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B42AB491C01DD38001A2BDD /* Symbol.swift */; };
 		6B42AB4C1C01DD4C001A2BDD /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B42AB4B1C01DD4C001A2BDD /* FrequencyTable.swift */; };
@@ -27,6 +30,11 @@
 
 /* Begin PBXFileReference section */
 		6B3D5A8C1C048FA100F0AD2E /* Double + Rounding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double + Rounding.swift"; sourceTree = "<group>"; };
+		6B3D5A8E1C04B6C100F0AD2E /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		6B3D5A901C04B77300F0AD2E /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		6B3D5A9B1C04B90800F0AD2E /* ArithmeticCodingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticCodingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3D5A9D1C04B90800F0AD2E /* ArithmeticCodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticCodingTests.swift; sourceTree = "<group>"; };
+		6B3D5A9F1C04B90800F0AD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B42AB3F1C01DCC2001A2BDD /* Arithmetic Coding */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Arithmetic Coding"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B42AB421C01DCC2001A2BDD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6B42AB491C01DD38001A2BDD /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
@@ -34,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6B3D5A981C04B90800F0AD2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B42AB3C1C01DCC2001A2BDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B3D5A9C1C04B90800F0AD2E /* ArithmeticCodingTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B3D5A9D1C04B90800F0AD2E /* ArithmeticCodingTests.swift */,
+				6B3D5A9F1C04B90800F0AD2E /* Info.plist */,
+			);
+			path = ArithmeticCodingTests;
+			sourceTree = "<group>";
+		};
 		6B42AB361C01DCC2001A2BDD = {
 			isa = PBXGroup;
 			children = (
 				6B42AB411C01DCC2001A2BDD /* Arithmetic Coding */,
+				6B3D5A9C1C04B90800F0AD2E /* ArithmeticCodingTests */,
 				6B42AB401C01DCC2001A2BDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				6B42AB3F1C01DCC2001A2BDD /* Arithmetic Coding */,
+				6B3D5A9B1C04B90800F0AD2E /* ArithmeticCodingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +93,8 @@
 				6B42AB491C01DD38001A2BDD /* Symbol.swift */,
 				6B42AB4B1C01DD4C001A2BDD /* FrequencyTable.swift */,
 				6B3D5A8C1C048FA100F0AD2E /* Double + Rounding.swift */,
+				6B3D5A8E1C04B6C100F0AD2E /* Encoder.swift */,
+				6B3D5A901C04B77300F0AD2E /* Decoder.swift */,
 			);
 			path = "Arithmetic Coding";
 			sourceTree = "<group>";
@@ -74,6 +102,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6B3D5A9A1C04B90800F0AD2E /* ArithmeticCodingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3D5AA01C04B90800F0AD2E /* Build configuration list for PBXNativeTarget "ArithmeticCodingTests" */;
+			buildPhases = (
+				6B3D5A971C04B90800F0AD2E /* Sources */,
+				6B3D5A981C04B90800F0AD2E /* Frameworks */,
+				6B3D5A991C04B90800F0AD2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArithmeticCodingTests;
+			productName = ArithmeticCodingTests;
+			productReference = 6B3D5A9B1C04B90800F0AD2E /* ArithmeticCodingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6B42AB3E1C01DCC2001A2BDD /* Arithmetic Coding */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B42AB461C01DCC2001A2BDD /* Build configuration list for PBXNativeTarget "Arithmetic Coding" */;
@@ -101,6 +146,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = OliverPoole;
 				TargetAttributes = {
+					6B3D5A9A1C04B90800F0AD2E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					6B42AB3E1C01DCC2001A2BDD = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -119,18 +167,39 @@
 			projectRoot = "";
 			targets = (
 				6B42AB3E1C01DCC2001A2BDD /* Arithmetic Coding */,
+				6B3D5A9A1C04B90800F0AD2E /* ArithmeticCodingTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		6B3D5A991C04B90800F0AD2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		6B3D5A971C04B90800F0AD2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3D5A9E1C04B90800F0AD2E /* ArithmeticCodingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B42AB3B1C01DCC2001A2BDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6B42AB431C01DCC2001A2BDD /* main.swift in Sources */,
 				6B42AB4C1C01DD4C001A2BDD /* FrequencyTable.swift in Sources */,
+				6B3D5A8F1C04B6C100F0AD2E /* Encoder.swift in Sources */,
 				6B3D5A8D1C048FA100F0AD2E /* Double + Rounding.swift in Sources */,
+				6B3D5A911C04B77300F0AD2E /* Decoder.swift in Sources */,
 				6B42AB4A1C01DD38001A2BDD /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +207,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6B3D5AA11C04B90800F0AD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ArithmeticCodingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.OliverPoole.ArithmeticCodingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6B3D5AA21C04B90800F0AD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ArithmeticCodingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.OliverPoole.ArithmeticCodingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6B42AB441C01DCC2001A2BDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -235,6 +326,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6B3D5AA01C04B90800F0AD2E /* Build configuration list for PBXNativeTarget "ArithmeticCodingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3D5AA11C04B90800F0AD2E /* Debug */,
+				6B3D5AA21C04B90800F0AD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6B42AB3A1C01DCC2001A2BDD /* Build configuration list for PBXProject "Arithmetic Coding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
