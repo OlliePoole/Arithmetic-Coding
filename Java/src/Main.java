@@ -1,6 +1,14 @@
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        double encodedValue = Encoder.encode("BILL GATES");
+        FrequencyTable table = Encoder.frequencyTable;
+
+
+        String decodedValue = Decoder.decode(table, encodedValue);
+        System.out.println("Decoded Value: " + decodedValue);
+
     }
 }
