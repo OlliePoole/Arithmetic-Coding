@@ -11,10 +11,10 @@ import Foundation
 class Encoder {
     
     static func encode(inputString : String) -> (table : FrequencyTable, encodedInput : Double) {
+        
         /**
          *  Creating the frequency table
          */
-        
         var frequencyTable = FrequencyTable()
         
         let numberOfElements = inputString.characters.count
@@ -53,21 +53,19 @@ class Encoder {
         var low : Double = 0.0
         var high : Double = 1.0
         
-        var range = high - low
-        
         for inputSymbol in inputString.characters {
             
             let symbol = frequencyTable.symbolForElement(inputSymbol)!
             
+            let range = high - low
+            
             high = low + (symbol.range!.upper * range)
             low = low + (symbol.range!.lower * range)
-            
-            // Range = existing range * the previous symbol frequency / 10
-            range = range * (Double(symbol.frequency) / 10.0)
             
             print(String(symbol.character) + " " + String(low) + " " + String(range))
         }
         
+        // Return the frequency table, and the average of the low and high values
         return (frequencyTable, ((low + high) / 2.0))
     }
 }

@@ -21,11 +21,7 @@ class Decoder {
                 if encodedValue >= symbol.range!.lower.roundToPlaces(2) && encodedValue < symbol.range?.upper.roundToPlaces(2) {
                     outputString += String(symbol.character)
                     
-                    // Subtract original lower by the symbol's lower
-                    encodedValue -= symbol.range!.lower
-                    
-                    // Divide by frequency to get the next number
-                    encodedValue /= (Double(symbol.frequency) / 10.0)
+                    encodedValue = (encodedValue - symbol.range!.lower) / (symbol.range!.upper - symbol.range!.lower)
                     
                     break
                 }
