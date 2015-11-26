@@ -10,12 +10,19 @@ import Foundation
 
 class Encoder {
     
+    /**
+     Encodes a string input to double form
+     
+     - parameter inputString: The string to encode
+     
+     - returns: A tuple containing the frequency table used in the convertion and the encoded output
+     */
     static func encode(inputString : String) -> (table : FrequencyTable, encodedInput : Double) {
         
         /**
          *  Creating the frequency table
          */
-        var frequencyTable = FrequencyTable()
+        let frequencyTable = FrequencyTable()
         
         let numberOfElements = inputString.characters.count
         
@@ -31,7 +38,7 @@ class Encoder {
         var probability : Double = 0.0
         
         // Assign the frequencies of each input character
-        for symbol in frequencyTable.table {
+        for symbol in frequencyTable.table.values {
             // Fetch the symbol just added
             
             probability = Double(symbol.frequency) / Double(numberOfElements)

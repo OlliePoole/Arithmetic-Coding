@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B3D5A8D1C048FA100F0AD2E /* Double + Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A8C1C048FA100F0AD2E /* Double + Rounding.swift */; };
 		6B3D5A8F1C04B6C100F0AD2E /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A8E1C04B6C100F0AD2E /* Encoder.swift */; };
 		6B3D5A911C04B77300F0AD2E /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A901C04B77300F0AD2E /* Decoder.swift */; };
 		6B3D5A9E1C04B90800F0AD2E /* ArithmeticCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D5A9D1C04B90800F0AD2E /* ArithmeticCodingTests.swift */; };
@@ -29,7 +28,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6B3D5A8C1C048FA100F0AD2E /* Double + Rounding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double + Rounding.swift"; sourceTree = "<group>"; };
 		6B3D5A8E1C04B6C100F0AD2E /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		6B3D5A901C04B77300F0AD2E /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		6B3D5A9B1C04B90800F0AD2E /* ArithmeticCodingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticCodingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +90,6 @@
 				6B42AB421C01DCC2001A2BDD /* main.swift */,
 				6B42AB491C01DD38001A2BDD /* Symbol.swift */,
 				6B42AB4B1C01DD4C001A2BDD /* FrequencyTable.swift */,
-				6B3D5A8C1C048FA100F0AD2E /* Double + Rounding.swift */,
 				6B3D5A8E1C04B6C100F0AD2E /* Encoder.swift */,
 				6B3D5A901C04B77300F0AD2E /* Decoder.swift */,
 			);
@@ -198,7 +195,6 @@
 				6B42AB431C01DCC2001A2BDD /* main.swift in Sources */,
 				6B42AB4C1C01DD4C001A2BDD /* FrequencyTable.swift in Sources */,
 				6B3D5A8F1C04B6C100F0AD2E /* Encoder.swift in Sources */,
-				6B3D5A8D1C048FA100F0AD2E /* Double + Rounding.swift in Sources */,
 				6B3D5A911C04B77300F0AD2E /* Decoder.swift in Sources */,
 				6B42AB4A1C01DD38001A2BDD /* Symbol.swift in Sources */,
 			);

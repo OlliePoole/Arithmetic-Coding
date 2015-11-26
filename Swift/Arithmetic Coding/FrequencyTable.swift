@@ -9,37 +9,47 @@
 import Foundation
 import Cocoa
 
-struct FrequencyTable {
+class FrequencyTable {
     
     /// The structure to store the elements
-    var table = Array<Symbol>()
+    var table = Dictionary<Character, Symbol>()
     
     /// Store the number of elements to know when to stop decoding
     var numberOfElements = 0
     
-    mutating func addValue(element : Character) {
-        let symbol = Symbol(character: element, frequency: 1)
+    /**
+     Adds a new element to the table
+     
+     - parameter element: The element to add
+     */
+    func addValue(element : Character) {
+        var symbol = table[element]
         
-        if table.contains(symbol) {
-            let index = table.indexOf(symbol)
+        // If there is no symbol for that character
+        if symbol == nil {
+            symbol = Symbol(character: element, frequency: 1)
             
-            table[index!].frequency++
+            table[element] = symbol
         }
         else {
-            table.append(symbol)
+            // Increment the existing character symbol
+            symbol?.frequency++
         }
         
         numberOfElements++
     }
     
+    
+    /**
+     Finds the symbol representation of the input element
+     
+     - parameter element: The element
+     
+     - returns: The symbol if present, if symbol cannot be found then nil
+     */
     func symbolForElement(element : Character) -> Symbol? {
-        let symbol = Symbol(character: element, frequency: 1)
-        if table.contains(symbol) {
-            let index = table.indexOf(symbol)
-            
-            return table[index!]
-        }
         
-        return nil
+        // If the element exists, return it, else return nil
+        return table[element] == nil ? nil : table[element]
     }
 }
