@@ -39,13 +39,11 @@ class Encoder {
         
         // Assign the frequencies of each input character
         for symbol in frequencyTable.table.values {
-            // Fetch the symbol just added
             
             probability = Double(symbol.frequency) / Double(numberOfElements)
             
+            // set the range for each symbol
             symbol.range = SymbolRange(lower: previousLower, upper: (probability + previousLower))
-            
-            print(String(symbol.character) + " lower: " + String(symbol.range!.lower) + " upper: " + String(symbol.range!.upper))
             
             // Set the previous lower for the next symbol
             previousLower = probability + previousLower
@@ -56,20 +54,21 @@ class Encoder {
         /**
          *  Encoding the input string
          */
-        
         var low : Double = 0.0
         var high : Double = 1.0
         
         for inputSymbol in inputString.characters {
             
-            let symbol = frequencyTable.symbolForElement(inputSymbol)!
-            
+            // Calculate the range
             let range = high - low
             
+            // Get the symbol from the table
+            let symbol = frequencyTable.symbolForElement(inputSymbol)!
+            
+            // Calculate the new high and low values
             high = low + (symbol.range!.upper * range)
             low = low + (symbol.range!.lower * range)
             
-            print(String(symbol.character) + " " + String(low) + " " + String(range))
         }
         
         // Return the frequency table, and the average of the low and high values

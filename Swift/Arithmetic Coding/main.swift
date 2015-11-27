@@ -8,7 +8,7 @@
 
 import Foundation
 
-var encoding = Encoder.encode("OLIVER POOLE")
+var encoding = Encoder.encode("BILL GATES")
 var table = encoding.table
 var low = encoding.encodedInput
 

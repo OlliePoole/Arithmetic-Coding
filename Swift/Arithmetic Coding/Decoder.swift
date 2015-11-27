@@ -24,21 +24,16 @@ class Decoder {
         
         // Loop once for each character in the frequency table
         for _ in 1...frequencyTable.numberOfElements {
+            
+            // Find the symbol where the encoded value currently lies
+            let symbol = Array(frequencyTable.table.values).findClosestSymbolTo(encodedValue)!
         
-            // Find the symbol with a range that contains the encoded value
-            for symbol in frequencyTable.table.values {
-                
-                if (encodedValue > symbol.range!.lower
-                    || Int(encodedValue) == Int(symbol.range!.lower)) && (encodedValue < symbol.range!.upper)  {
-                        
-                    outputString += String(symbol.character)
-                    
-                    // DESC: encodedValue = (encoded - symbol_lower) / (symbol_upper - symbol_lower)
-                    encodedValue = (encodedValue - symbol.range!.lower) / (symbol.range!.upper - symbol.range!.lower)
-                    
-                    break
-                }
-            }
+            // Append the symbol to the output string
+            outputString += String(symbol.character)
+            
+            // Remove the symbol from the encoded value
+            encodedValue = (encodedValue - symbol.range!.lower) / (symbol.range!.upper - symbol.range!.lower)
+            
         }
         
         return outputString
